@@ -9,27 +9,50 @@ SITEURL = ''
 PATH = 'content'
 
 TIMEZONE = 'America/Sao_Paulo'
-
-DEFAULT_LANG = 'pt'
+LOCALE = 'pt_BR'
+DEFAULT_LANG = 'pt-br'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
+FEED_ALL_RSS = 'blog/feeds/all.rss.xml'
+FEED_ALL_ATOM = 'blog/feeds/all.atom.xml'
+FEED_MAX_ITEMS = 15
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
-
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
-
 DEFAULT_PAGINATION = 10
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'sitemap']
+SITEMAP_SAVE_AS = 'sitemap.xml'
+
+THEME = 'themes/pelican-alchemy/alchemy'
+
+USE_FOLDER_AS_CATEGORY = True
+DELETE_OUTPUT_DIRECTORY = True
+
+DEFAULT_METADATA = {
+    'description': 'Site da comunidade de tecnologia de Sorocaba',
+}
+
+ARTICLE_ORDER_BY = 'date'
+
+ARCHIVES_SAVE_AS = 'blog_index.html'
+
+PAGE_URL = PAGE_SAVE_AS = '{slug}.html'
+
+SLUGIFY_SOURCE = 'title'
+
+LOAD_CONTENT_CACHE = False
+CACHE_CONTENT = False
+
+# Theme specific settings
+ICONS = (
+    ('slack', 'http://bit.ly/slack-tecsorocabana'),
+    ('github', 'https://github.com/tecsorocabana'),
+)
+
+SITEIMAGE = 'https://i.imgur.com/3w1tsPS.png'
+SITESUBTITLE = 'Comunidade de profissionais de tecnologia de Sorocaba'
+DESCRIPTION = 'TecSorocabana é a comunidade de profissionais de tecnologia de Sorocaba'
+HIDE_AUTHORS = True
