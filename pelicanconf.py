@@ -35,6 +35,10 @@ DEFAULT_METADATA = {
     'description': 'Site da comunidade de tecnologia de Sorocaba',
 }
 
+EXTRA_PATH_METADATA = {
+    'favicon.ico': {'path': 'favicon.ico'}
+}
+
 ARTICLE_ORDER_BY = 'date'
 
 ARCHIVES_SAVE_AS = 'blog_index.html'

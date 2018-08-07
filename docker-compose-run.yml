@@ -1,0 +1,8 @@
+version: '2.2'
+services:
+  pyhton:
+    image: python:alpine3.8
+    command: make html
+    volumes: 
+      - .:/home
+    working_dir: /home
